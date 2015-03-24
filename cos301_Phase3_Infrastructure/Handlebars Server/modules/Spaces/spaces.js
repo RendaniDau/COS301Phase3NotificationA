@@ -84,7 +84,7 @@ exports.createBuzzSpace = function (academicYear,isOpen,moduleID,name,adminUsers
 
                 Space.find(function (err, spaces) {
                     if (err) return console.error(err);
-                    console.log(spaces);
+                    //console.log(spaces);
                 })
             });
         }
@@ -93,7 +93,7 @@ exports.createBuzzSpace = function (academicYear,isOpen,moduleID,name,adminUsers
 
             Space.find(function (err, spaces) {
                 if (err) return console.error(err);
-                console.log(spaces);
+                //console.log(spaces);
             })
             newBuzzSpace = result;
         }

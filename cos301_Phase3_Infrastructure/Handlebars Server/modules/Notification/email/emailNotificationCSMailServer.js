@@ -42,3 +42,4 @@ function sendNotification(inUser, inPassword, inSender, inRecipient, inNotificat
 }
 //TEST FUNCTION CALL
 sendNotification(user,password,sender,recipient,notificationType,emails);
+

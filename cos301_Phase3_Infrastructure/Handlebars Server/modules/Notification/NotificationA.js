@@ -82,4 +82,4 @@ function sendNotification(inUser, inPassword, inSender, inRecipient, inNotificat
 }
 
 module.exports.notify = notify;
-module.exports.sendNotification = sendNotification;
+module.exports.sendNotification=sendNotification;

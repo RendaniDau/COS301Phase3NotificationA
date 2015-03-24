@@ -1,0 +1,2 @@
+This file perform the ldap connection and get the data from ldap
+but still busy with making it to return the response to the client
