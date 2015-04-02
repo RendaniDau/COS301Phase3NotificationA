@@ -1,0 +1,26 @@
+database:
+mongodb://45.55.154.156:27017/Buzz
+userAddress:
+301emailtest@gmail.com
+userAddressPassword:
+301testemail
+subjectRegistration:
+Successful registration.
+messageRegistration:
+You have been registered to a thread.
+subjectDeregistration:
+Successful registration.
+messageDeregistration:
+You have been deregistered from a thread.
+subjectNewPost:
+A new post.
+messageNewPost:
+A new post has happened.
+subjectDeletedThread:
+Thread deleted.
+messageDeletedThread:
+The thread you are following has been deleted.
+subjectMovedThread:
+Moved thread.
+messageMovedThread:
+This thread has been moved.
