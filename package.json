@@ -1,0 +1,23 @@
+{
+	"name": "NotificationA",
+	"version": "1.0.0",
+	"description": "Notify users of activity that they are registered to via email",
+	"author": "COS 301 NotificationA Team",
+	"contributors": [
+		{"name": "Byron Dinkelmann"},
+		{"name": "Molefe Molefe"},
+		{"name": "Thabang "},
+		{"name": "Rendani Dau"},
+		{"name": "Timothy Kirk"}],
+	"scripts": {
+		"test": "node test.js",
+		"start": "node NotificationA.js"},
+	"main": "NotificationA.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/RendaniDau/COS301Phase3NotificationA"},
+	"dependencies": {
+		"nodemailer": "*",
+		"mongoose": "*"},
+	"private": true
+}
