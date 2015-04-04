@@ -6,9 +6,9 @@
 	"contributors": [
 		{"name": "Byron Dinkelmann"},
 		{"name": "Molefe Molefe"},
-		{"name": "Thabang "},
+		{"name": "Thabang Letageng"},
 		{"name": "Rendani Dau"},
-		{"name": "Timothy Kirk"}],
+		{"name": "Timothy Kirker"}],
 	"scripts": {
 		"test": "node test.js",
 		"start": "node NotificationA.js"},

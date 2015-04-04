@@ -3,7 +3,7 @@ mongodb://45.55.154.156:27017/Buzz
 userAddress:
 301emailtest@gmail.com
 userAddressPassword:
-301testemail
+new301testemail
 subjectRegistration:
 Successful registration.
 messageRegistration:
@@ -24,3 +24,7 @@ subjectMovedThread:
 Moved thread.
 messageMovedThread:
 This thread has been moved.
+subjectNewAppraisal
+A New Appraisal
+messageNewAppraisal
+You have a new appraisal.
