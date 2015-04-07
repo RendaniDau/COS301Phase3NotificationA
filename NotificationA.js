@@ -181,7 +181,7 @@ var notifyNewPost = function(jsonObject)
         var dataset = mongodb.model('Notifications_Thread', new Schema({
             notification_Following : Boolean,
             notification_StudentID : String}), 'Notifications_Thread');
-        dataset.find({'notification_ThreadID' : '0'}, function (err, data) {
+        dataset.find({'notification_ThreadID' : jsonObject.threadID}, function (err, data) {
 
             if (err == null)
             {
@@ -237,7 +237,7 @@ var notifyDeletedThread = function(jsonObject)
         var dataset = mongodb.model('Notifications_Thread', new Schema({
             notification_Following : Boolean,
             notification_StudentID : String}), 'Notifications_Thread');
-        dataset.find({'notification_ThreadID' : '0'}, function (err, data) {
+        dataset.find({'notification_ThreadID' : jsonObject.threadID}, function (err, data) {
 
             if (err == null)
             {
@@ -293,7 +293,7 @@ var notifyMovedThread = function(jsonObject)
         var dataset = mongodb.model('Notifications_Thread', new Schema({
             notification_Following : Boolean,
             notification_StudentID : String}), 'Notifications_Thread');
-        dataset.find({'notification_ThreadID' : '0'}, function (err, data) {
+        dataset.find({'notification_ThreadID' : jsonObject.threadID}, function (err, data) {
 
             if (err == null)
             {

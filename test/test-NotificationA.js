@@ -4,7 +4,7 @@ var info1 = {"type": "follow_Thread", "threadID": "1", "studentID": "u34567890"}
 var info2 = {"type": "follow_Thread", "threadID": "1", "studentID": "u34567890"};
 var info3 = {"threadID": "1", "studentID": "u34567890"};
 var info4 = {"studentID": "1", "studentID": "u34567890"};
-
+var info5 = { appraisalType : 'Funny', studentID : 'u34567890'};
 exports['notifyRegistration'] = function(test)
 {
     test.expect(2);
@@ -81,11 +81,41 @@ exports['notifyMovedThread'] = function(test)
     test.done();
 }
 
+exports['appraisalRegister'] = function(test)
+{
+    test.expect(2);
+    test.equal(NotificationA.appraisalRegister(info5), true);
+    test.equal(NotificationA.appraisalRegister(info5), true);
+    test.throws(function () { NotificationA.appraisalRegister(); });
+    test.throws(function () { NotificationA.appraisalRegister(null); });
+    test.throws(function () { NotificationA.appraisalRegister(true); });
+    test.throws(function () { NotificationA.appraisalRegister([]); });
+    test.throws(function () { NotificationA.appraisalRegister({}); });
+    test.throws(function () { NotificationA.appraisalRegister('asdf'); });
+    test.throws(function () { NotificationA.appraisalRegister('123'); });
+    test.done();
+}
+
+exports['appraisalDeregister'] = function(test)
+{
+    test.expect(2);
+    test.equal(NotificationA.appraisalDeregister(info5), true);
+    test.equal(NotificationA.appraisalDeregister(info5), true);
+    test.throws(function () { NotificationA.appraisalDeregister(); });
+    test.throws(function () { NotificationA.appraisalDeregister(null); });
+    test.throws(function () { NotificationA.appraisalDeregister(true); });
+    test.throws(function () { NotificationA.appraisalDeregister([]); });
+    test.throws(function () { NotificationA.appraisalDeregister({}); });
+    test.throws(function () { NotificationA.appraisalDeregister('asdf'); });
+    test.throws(function () { NotificationA.appraisalDeregister('123'); });
+    test.done();
+}
+
 exports['appraisalNotify'] = function(test)
 {
     test.expect(2);
-    test.equal(NotificationA.appraisalNotify(info3), true);
-    test.equal(NotificationA.appraisalNotify(info4), true);
+    test.equal(NotificationA.appraisalNotify(info5), true);
+    test.equal(NotificationA.appraisalNotify(info5), true);
     test.throws(function () { NotificationA.appraisalNotify(); });
     test.throws(function () { NotificationA.appraisalNotify(null); });
     test.throws(function () { NotificationA.appraisalNotify(true); });
