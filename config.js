@@ -1,14 +1,14 @@
-var getDatabaseAddress = function()
+var databaseAddress = function()
 {
 	return "mongodb://45.55.154.156:27017/Buzz";
 }
 
-var getUserAddress = function()
+var userAddress = function()
 {
 	return "301emailtest@gmail.com";
 }
 
-var getUserAddressPassword = function()
+var userAddressPassword = function()
 {
 	return "new301testemail";
 }
@@ -73,9 +73,19 @@ var messageNewAppraisal = function()
 	return "You have a new appraisal.";
 }
 
-module.exports.getDatabaseAddress = getDatabaseAddress;
-module.exports.getUserAddress = getUserAddress;
-module.exports.getUserAddressPassword = getUserAddressPassword;
+var followThreadTable = function()
+{
+	return "Notifications_Thread";
+}
+
+var followUserTable = function()
+{
+	return "Notification_Users";
+}
+
+module.exports.databaseAddress = databaseAddress;
+module.exports.userAddress = userAddress;
+module.exports.userAddressPassword = userAddressPassword;
 module.exports.subjectRegistration = subjectRegistration;
 module.exports.messageRegistration = messageRegistration;
 module.exports.subjectDeregistration = subjectDeregistration;
@@ -88,3 +98,5 @@ module.exports.subjectMovedThread = subjectMovedThread;
 module.exports.messageMovedThread = messageMovedThread;
 module.exports.subjectNewAppraisal = subjectNewAppraisal;
 module.exports.messageNewAppraisal = messageNewAppraisal;
+module.exports.followThreadTable = followThreadTable;
+module.exports.followUserTable = followUserTable;
