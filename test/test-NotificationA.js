@@ -5,20 +5,21 @@ var info2 = {"type": "follow_Thread", "threadID": "1", "studentID": "u34567890"}
 var info3 = {"threadID": "1", "studentID": "u34567890"};
 var info4 = {"studentID": "1", "studentID": "u34567890"};
 var info5 = { appraisalType : 'Funny', studentID : 'u34567890'};
+
 exports['notifyRegistration'] = function(test)
 {
     test.expect(2);
-	test.equal(NotificationA.notifyRegistration(info1), true);
-    test.equal(NotificationA.notifyRegistration(info2), true);
-    test.throws(function () { NotificationA.notifyRegistration(); });
-    test.throws(function () { NotificationA.notifyRegistration(null); });
-    test.throws(function () { NotificationA.notifyRegistration(true); });
-    test.throws(function () { NotificationA.notifyRegistration([]); });
-    test.throws(function () { NotificationA.notifyRegistration({}); });
-    test.throws(function () { NotificationA.notifyRegistration('asdf'); });
-    test.throws(function () { NotificationA.notifyRegistration('123'); });
+    test.equal(NotificationA.notifyDeregistration(info1), true);
+    test.equal(NotificationA.notifyDeregistration(info2), true);
+    test.throws(function () { NotificationA.notifyDeregistration(); });
+    test.throws(function () { NotificationA.notifyDeregistration(null); });
+    test.throws(function () { NotificationA.notifyDeregistration(true); });
+    test.throws(function () { NotificationA.notifyDeregistration([]); });
+    test.throws(function () { NotificationA.notifyDeregistration({}); });
+    test.throws(function () { NotificationA.notifyDeregistration('asdf'); });
+    test.throws(function () { NotificationA.notifyDeregistration('123'); });
     test.done();
-	test.done();
+    
 }
 
 exports['notifyDeregistration'] = function(test)
@@ -38,17 +39,25 @@ exports['notifyDeregistration'] = function(test)
 
 exports['notifyNewPost'] = function(test)
 {
-    test.expect(2);
+    test.expect(1);
+
+    var _exit = process.exit;
+    process.exit = function()
+    {
+        process.exit = _exit;
+
+        test.done();
+    }
+
     test.equal(NotificationA.notifyNewPost(info3), true);
-    test.equal(NotificationA.notifyNewPost(info4), true);
-    test.throws(function () { NotificationA.notifyNewPost(); });
+    /*test.throws(function () { NotificationA.notifyNewPost(); });
     test.throws(function () { NotificationA.notifyNewPost(null); });
     test.throws(function () { NotificationA.notifyNewPost(true); });
     test.throws(function () { NotificationA.notifyNewPost([]); });
     test.throws(function () { NotificationA.notifyNewPost({}); });
     test.throws(function () { NotificationA.notifyNewPost('asdf'); });
     test.throws(function () { NotificationA.notifyNewPost('123'); });
-    test.done();
+    process.exit = test.done();*/
 }
 
 exports['notifyDeletedThread'] = function(test)
