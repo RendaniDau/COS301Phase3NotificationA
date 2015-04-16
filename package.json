@@ -18,6 +18,7 @@
 		"url": "https://github.com/RendaniDau/COS301Phase3NotificationA"},
 	"dependencies": {
 		"nodemailer": "*",
-		"mongoose": "*"},
+		"mongoose": "*"
+		"config.js": "*"},
 	"private": true
 }
