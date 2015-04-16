@@ -83,6 +83,16 @@ var followUserTable = function()
 	return "Notification_Users";
 }
 
+var appraisalTable = function()
+{
+	return "Notifications_Appraisal";
+}
+
+var usersTable = function()
+{
+	return "Students";
+}
+
 module.exports.databaseAddress = databaseAddress;
 module.exports.userAddress = userAddress;
 module.exports.userAddressPassword = userAddressPassword;
@@ -100,3 +110,5 @@ module.exports.subjectNewAppraisal = subjectNewAppraisal;
 module.exports.messageNewAppraisal = messageNewAppraisal;
 module.exports.followThreadTable = followThreadTable;
 module.exports.followUserTable = followUserTable;
+module.exports.appraisalTable = appraisalTable;
+module.exports.usersTable = usersTable;
